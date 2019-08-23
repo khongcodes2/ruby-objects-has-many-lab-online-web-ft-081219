@@ -4,4 +4,8 @@ class Post
     @title=title
   end
   
+  def author=(name)
+    
+  end
+  
 end
