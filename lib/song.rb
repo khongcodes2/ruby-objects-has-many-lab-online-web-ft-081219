@@ -7,6 +7,10 @@ class Song
     @name=name
   end
   
+  def self.all
+    @@all
+  end
+  
   def artist=(artist)
     @artist=artist
     artist.songs.push(self)
