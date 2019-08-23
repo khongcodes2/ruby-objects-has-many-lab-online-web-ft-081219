@@ -21,7 +21,7 @@ class Artist
   end
   
   def self.song_count
-    @@roster.collect{|artist|artist.songs.count}
+    @@roster.collect{|artist|artist.songs.count}.sum
   end
   
 end
