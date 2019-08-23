@@ -1,8 +1,9 @@
 class Author
   attr_reader :name
+  @@roster=[]
   
   def initialize(name)
-    
+    @@roster.push(self)
     @name=name
     @posts=[]
   end
@@ -17,6 +18,10 @@ class Author
   
   def add_post_by_title(title)
     Post.new(title).author=self
+  end
+  
+  def post_count
+    @@roster.collect {|author|author.posts.count}.sum
   end
   
 end
