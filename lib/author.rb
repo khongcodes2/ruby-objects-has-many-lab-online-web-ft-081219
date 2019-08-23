@@ -14,4 +14,8 @@ class Author
     post_arg.author=self
   end
   
+  def add_post_by_title(title)
+    post.new
+  end
+  
 end
