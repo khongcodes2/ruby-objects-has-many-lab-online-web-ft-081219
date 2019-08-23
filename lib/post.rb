@@ -16,4 +16,8 @@ class Post
     name.posts.push(self)
   end
   
+  def author_name
+    self.author.name
+  end
+  
 end
