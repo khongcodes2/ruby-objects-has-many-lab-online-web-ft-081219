@@ -1,7 +1,9 @@
 class Song
   attr_reader :name, :artist
+  @@all=[]
   
   def initialize(name)
+    @@all.push(self)
     @name=name
   end
   
