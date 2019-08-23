@@ -7,6 +7,10 @@ class Post
     @title=title
   end
   
+  def self.all
+    @@all
+  end
+  
   def author=(name)
     @author=name
     name.posts.push(self)
