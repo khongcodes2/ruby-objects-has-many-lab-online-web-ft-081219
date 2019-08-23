@@ -20,7 +20,7 @@ class Author
     Post.new(title).author=self
   end
   
-  def post_count
+  def self.post_count
     @@roster.collect {|author|author.posts.count}.sum
   end
   
