@@ -2,9 +2,11 @@ require 'pry'
 
 class Artist
   attr_reader :name, :songs
- # binding.pry
+  @@roster=[]
+  # binding.pry
   
   def initialize(name)
+    @@roster.push(self)
     @name = name
     @songs=[]
   end
@@ -16,6 +18,10 @@ class Artist
   def add_song_by_name(song_name)
     new_one=Song.new(song_name)
     new_one.artist=self
+  end
+  
+  def self.song_count
+    @@roster.collect{|artist|artist.songs.count}
   end
   
 end
