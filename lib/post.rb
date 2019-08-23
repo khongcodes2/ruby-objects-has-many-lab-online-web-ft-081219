@@ -6,7 +6,7 @@ class Post
   
   def author=(name)
     @author=name
-    
+    name.posts.push(self)
   end
   
 end
