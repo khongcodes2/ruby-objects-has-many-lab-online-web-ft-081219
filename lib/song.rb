@@ -1,5 +1,5 @@
 class Song
-  attr_reader :name
+  attr_reader :name, :artist
   
   def initialize(name)
     @name=name
@@ -7,6 +7,6 @@ class Song
   
   def artist=(artist)
     @artist=artist
-    
+    artist.songs.push(self)
 
 end
