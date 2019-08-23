@@ -1,7 +1,9 @@
 class Post
   attr_reader :author, :title
+  @@all=[]
   
   def initialize(title)
+    @@all.push(self)
     @title=title
   end
   
