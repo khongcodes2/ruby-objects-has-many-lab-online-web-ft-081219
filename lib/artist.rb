@@ -1,7 +1,7 @@
 require 'pry'
 
 class Artist
-  attr_reader :name
+  attr_reader :name, :songs
  # binding.pry
   
   def initialize(name)
@@ -9,8 +9,8 @@ class Artist
     @songs=[]
   end
   
-  def songs
-    @songs
+  def add_song(song)
+    
   end
   
   
